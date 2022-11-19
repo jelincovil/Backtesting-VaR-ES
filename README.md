@@ -23,7 +23,7 @@ Con motivos de difusión del conocimiento, añadimos el conceptos *Expectil* y e
 
 - Berkowitz, J., Christoffersen, P., \& Pelletier, D. (2011). Evaluating value--at--risk models with desk--level data. Management Science, 57(12), 2213--2227.
 
-Candelon, B., Colletaz, G., Hurlin, C., \& Tokpavi, S. (2010). Backtesting value-at-risk: a GMM duration-based test. Journal of Financial Econometrics, 9(2), 314--343.
+- Candelon, B., Colletaz, G., Hurlin, C., \& Tokpavi, S. (2010). Backtesting value-at-risk: a GMM duration-based test. Journal of Financial Econometrics, 9(2), 314--343.
 
-Christoffersen, P. F. (1998). Evaluating interval forecasts. International economic review, 841--862.
+- Christoffersen, P. F. (1998). Evaluating interval forecasts. International economic review, 841--862.
 
