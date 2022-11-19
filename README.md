@@ -12,11 +12,18 @@ una alta potencia para tama\~nos de muestra grandes. Adicionalmente, mostramos q
 utilizando duraciones y covariables resulta en un excelente desempeño en las predicciones VaR y ES de acuerdo a la evaluaci\'on realizada por 
 las pruebas consideradas. \\
 
-**Palabras-clases:** Cobertura Condicional, Expected Shortfall, Poder emp\'irico,  Prueba de evaluaci\'on, Value--at--Risk.
+**Palabras-clases:** Cobertura Condicional, Expected Shortfall, Poder empírico,  Prueba de evaluación, Value-at-Risk.
 
 Nota: el texto completo lo pueden encontrar en portugues [Lincovil y Chang (2019)](https://bibliotecadigital.fgv.br/ojs/index.php/rbfin/article/view/78758)
 Con motivos de difusión del conocimiento, añadimos el conceptos *Expectil* y ejemplos.
 
 ##
 
-##
+## Referencias
+
+- Berkowitz, J., Christoffersen, P., \& Pelletier, D. (2011). Evaluating value--at--risk models with desk--level data. Management Science, 57(12), 2213--2227.
+
+Candelon, B., Colletaz, G., Hurlin, C., \& Tokpavi, S. (2010). Backtesting value-at-risk: a GMM duration-based test. Journal of Financial Econometrics, 9(2), 314--343.
+
+Christoffersen, P. F. (1998). Evaluating interval forecasts. International economic review, 841--862.
+
