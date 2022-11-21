@@ -1,4 +1,4 @@
-# Prueba de hipótesis para evaluar las previsiones del *Value-at-Risk*, *Expected Shortfall* y los *Expectiles*
+# Prueba de hipótesis para evaluar las previsiones del *Value-at-Risk*, *Expected Shortfall* y *Expectiles*
 Autores: Dra. Chang Chann. IME USP.
          Dr. Jaime Lincovil. 
 
@@ -19,7 +19,22 @@ las pruebas consideradas.
 Nota: el texto completo lo pueden encontrar en portugues [Chang y Lincovil (2019)](https://bibliotecadigital.fgv.br/ojs/index.php/rbfin/article/view/78758).
 Con motivos de difusión del conocimiento, en el pdf añadimos el conceptos *Expectil* y ejemplos.
 
-##
+## VaR, infraciones del VaR, duraciones y  ES
+
+Sea $P_t$ el precio de un activo en el instante $t$ y $r_{t}= \log(P_{t}) - \log(P_{t-1})$ el correspondiente log-retorno (o simplemente retorno) al instante $t$. Para un $R_t=(P_t-P_{t-1})/P_t$ pequeno, se sabe que $r_t \approx R_t$, es decir, el retorno $r_t$ representa aproximadamente la variación de precios del activo desde el tiempo $ t-1$ a $t$. El VaR en el tiempo $t$ con probabilidad $p \in (0,1)$ y el $p$-cuantil $\inf\{l: F_t(l)\geq p\}$, donde $F_t $ es la función de distribución acumulada del retorno $r_t$. En particular, a continuación se da la definición formal de la previsión de VaR para una posición larga para distribuciones continuas.
+
+
+::: Definition
+
+Definimos la predicci\'on $\textnormal{VaR}_{t | t-1}(p)$ realizado en el tiempo $t-1$ con un horizonte de una unidad de tiempo y con probabilidad de cobertura $p$, como el $p$--cuantil que satisface 
+
+\[ 
+p= \textnormal{Pr} \Big[ r_{t}  <  \textnormal{VaR}_{t  | t-1}(p) \ | \Omega_{t-1} \Big],
+\]
+donde   $\Omega_{t-1}$ es  un conjunto que contiene   informaciones  hasta el tiempo $t-1$.
+
+::: Definition
+
 
 ## Referencias
 
