@@ -156,11 +156,17 @@ Aprovechamos de obtner estadistias de resumen
 
 ```{r}
 # Analisis descriptivo numerico
-summary(retornos)
-skewness(retornos)
-kurtosis(retornos)
-sd(retornos)
+> summary(retornos)
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max. 
+-0.0921069 -0.0082590  0.0002285  0.0002477  0.0089303  0.0638867 
+> skewness(retornos)
+ -0.1523737
+> kurtosis(retornos)
+ 1.940382
+> sd(retornos)
+ 0.01452887
 ```
+
 
 
 ## Referencias
