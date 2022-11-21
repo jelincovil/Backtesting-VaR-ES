@@ -25,15 +25,12 @@ Sea $P_t$ el precio de un activo en el instante $t$ y $r_{t}= \log(P_{t}) - \log
 
 
 ::: Definition
-
 Definimos la predicci\'on $\textnormal{VaR}_{t | t-1}(p)$ realizado en el tiempo $t-1$ con un horizonte de una unidad de tiempo y con probabilidad de cobertura $p$, como el $p$--cuantil que satisface 
-
-\[ 
+$$
 p= \textnormal{Pr} \Big[ r_{t}  <  \textnormal{VaR}_{t  | t-1}(p) \ | \Omega_{t-1} \Big],
-\]
+$$
 donde   $\Omega_{t-1}$ es  un conjunto que contiene   informaciones  hasta el tiempo $t-1$.
-
-::: Definition
+:::
 
 
 ## Referencias
