@@ -67,7 +67,7 @@ Newey (1987) definidos a continuación.
 La previsión de un espectil a partir de la serie de retornos hasta $r_{t-1}$ es dada por la siguiente solución de minimización:
 
 $$
-\mbox{EX}\sb{t|t-1}(p) = \arg \min_{r \in  \mathbb{R}} \left[ \Big|  p - I_{ \{ r\sb{t} <  r \}} \Big| (r\sb{t} - r )^2  \big|  \Omega\sb{t-1} \right] .
+\mbox{EX}_{t|t-1}(p) = \arg \min_{r \in  \mathbb{R}} \left[ \Big|  p - I_{ \{ r_{t} <  r \}} \Big| (r_{t} - r )^2  \big|  \Omega_{t-1} \right] .
 $$
 
 El EX es una extensión del VaR que cumpleo la propiedad de coherencia. Análogamente, al ES , el CARES (Conditional Autoregressive Expected Shortfall) introducido por Taylor (2008) es dado por
@@ -77,7 +77,12 @@ $$
 $$
 
 
-## Métodos HS, POT e DPOT para a previsión del VaR y ES 
+## Avaluaciones de las previsiones generadas por los métodos POT e DPOT con códigos de R
+
+En esta sección listo algunos códigos de R usados y los graficos obtenidos para este trabajo publicado.
+
+
+
 
 ## Referencias
 
