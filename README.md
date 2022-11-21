@@ -2,6 +2,7 @@
 Autores: Dra. Chang Chann. IME USP.
          Dr. Jaime Lincovil. 
 
+<div style="text-align: justify">  
 **Resumen:** La evaluación de pronósticos de medidas de riesgo, tales como Value-at-Risk (VaR) y Expected Shortfall (ES), 
 es una actividad muy relevante para las instituciones financieras. Las pruebas de hip\'otesis que realizan esta evaluación se 
 introdujeron con el objetivo de verificar la eficiencia de estas predicciones. En este trabajo comparamos el poder empírico de nuevas 
@@ -13,7 +14,7 @@ modelos de prueba. Para evaluar las predicciones de ES, aquellas basadas en dist
 una alta potencia para tama\~nos de muestra grandes. Adicionalmente, mostramos que el m\'etodo basado en la distribución de Pareto generalizada
 utilizando duraciones y covariables resulta en un excelente desempeño en las predicciones VaR y ES de acuerdo a la evaluaci\'on realizada por 
 las pruebas consideradas. 
-
+</div>
 **Palabras-clases:** Cobertura Condicional, Expected Shortfall, Poder empírico,  Prueba de evaluación, Value-at-Risk.
 
 Nota: el texto completo lo pueden encontrar en portugues [Chang y Lincovil (2019)](https://bibliotecadigital.fgv.br/ojs/index.php/rbfin/article/view/78758).
