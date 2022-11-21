@@ -73,7 +73,7 @@ $$
 El EX es una extensión del VaR que cumpleo la propiedad de coherencia. Análogamente, al ES , el CARES (Conditional Autoregressive Expected Shortfall) introducido por Taylor (2008) es dado por
 
 $$
-\textnormal{CARES}\sb{t|t-1}(p)= \mathbb{E}\big[r_t \ | r_t \leq \textnormal{EX}\sb{t|t-1}(p)   \big]. 
+\textnormal{CARES}_{t|t-1}(p)= \mathbb{E}\big[r_t \ | r_t \leq \textnormal{EX}_{t|t-1}(p)   \big]. 
 $$
 
  
