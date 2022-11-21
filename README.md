@@ -96,8 +96,81 @@ library(forecast)
 Luego cargamos los datos y verificas la existencia o no de Nas
 
 ```{r}
+# Cargo los datos
+raw <- read.csv("BVSP.csv", header=TRUE,  sep = "," ,
+                stringsAsFactors=FALSE)
+str(raw)
+Dia <- as.Date(raw$Dia, format= "%Y-%m-%d")
+data1 <- data.frame( Dia = Dia, 
+                     BVSP = as.numeric(raw$Adj.Close) )
+summary(data1)
+
+# Cuento los  Na
+sum(is.na(data1$BVSP))
+
+# Grafico y verifico los datos perdidos
+tsoutliers(data1$BVSP)
+data1 <- data.frame( Dia1 = Dia, 
+                     ibovespa= tsclean(data1$BVSP, 
+                                       replace.missing = TRUE,  lambda = 2.4) )
+# Transformo a log-retornos y seleccion
+# datos de entrenamiento y test
+retornos <- diff (log(data1$ibovespa))
+data2 <- data.frame(Dia2 = Dia[2:2006], retornos= retornos)
+data2 <- data2[1:2000,]
+dim(data2)
+
+data2 <- data.frame( Dia2 = data2$Dia2, 
+                     retornos= tsclean(data2$retornos, 
+                                       replace.missing = TRUE,  lambda = NULL) )
+
+outsample <- data2$retornos[1001: 2000]
+# Verifico que los datos no tengan NAs
+sum(is.na(outsample))
+sum(is.na(data2$retornos))
+
 
 ```
+
+Los siguientes códigos obtienes los gráficos exploratorios
+```{r}
+plot(ibovespa~Dia1, data1,type="l",xlab= "Tempo", ylab=" Ibovespa")
+axis.Date(1, Dia1, format(Dia, "%y/%m/%d"))
+
+plot(retornos~Dia2, data2, type="l",xlab= "Tempo", ylab="Retornos do Ibovespa")
+
+hist(data2$retornos, prob=TRUE, ylim = c(0, 33),
+     xlab="", ylab="", main="")
+  lines(density(data2$retornos), # density plot
+      lwd = 2, # thickness of line
+      col = "blue")
+
+qqnorm(retornos, pch = 1, main = "",
+       xlab="Quantis teóricos", ylab="Quantis amostrais")
+qqline(retornos, col = "black", lwd = 2)
+
+```
+
+Aprovechamos de obtner estadistias de resumen
+
+```{r}
+plot(ibovespa~Dia1, data1,type="l",xlab= "Tempo", ylab=" Ibovespa")
+axis.Date(1, Dia1, format(Dia, "%y/%m/%d"))
+
+plot(retornos~Dia2, data2, type="l",xlab= "Tempo", ylab="Retornos do Ibovespa")
+
+hist(data2$retornos, prob=TRUE, ylim = c(0, 33),
+     xlab="", ylab="", main="")
+  lines(density(data2$retornos), # density plot
+      lwd = 2, # thickness of line
+      col = "blue")
+
+qqnorm(retornos, pch = 1, main = "",
+       xlab="Quantis teóricos", ylab="Quantis amostrais")
+qqline(retornos, col = "black", lwd = 2)
+
+```
+
 
 ## Referencias
 
