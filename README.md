@@ -25,7 +25,7 @@ Sea $P_t$ el precio de un activo en el instante $t$ y $r_{t}= \log(P_{t}) - \log
 
 
 **Definición**
-Definimos la predicci\'on $\textnormal{VaR}_{t | t-1}(p)$ realizado en el tiempo $t-1$ con un horizonte de una unidad de tiempo y con probabilidad de cobertura $p$, como el $p$--cuantil que satisface 
+Definimos la predicción $\textnormal{VaR}_{t | t-1}(p)$ realizado en el tiempo $t-1$ con un horizonte de una unidad de tiempo y con probabilidad de cobertura $p$, como el $p$--cuantil que satisface 
 
 $$
 p= \textnormal{Pr} \Big[ r_{t}  <  \textnormal{VaR}_{t  | t-1}(p) \ | \Omega_{t-1} \Big],
@@ -55,7 +55,7 @@ donde $t_{i}$ denota el instante de la $i$-ésima infración del VaR. Para $i=1$
 Otra medida de riesgo muy utilizada hoy en día es el ES. El ES fue introducido por Rappoport (1993) y luego Artzner (1997)-Artzner(1999) estudió formalmente sus propiedades.  El ES $(p)$ asociado al  VaR $(p)$ es definido por $\mbox{ES}(p)=1/(1-p)\int_{p}^1\mbox{VaR}(u)du$. De forma simplificada, el ES es  la pérdida esperada dado que la rentabilidad viola el VaR, es decir $\mbox{ES}(p)= \mathbb{E}\big[r_t \ | r_t < \mbox{VaR}(p)\big]$. La definición de predicción ES de un paso adelante se da a continuación.
 
 **Definición**
-Definimos el pron\'ostico $\mbox{ES}_{t|t-1}(p)$ realizado en el tiempo $t-1$ con un horizonte de una unidad de tiempo asociado al pronóstico $\mbox{VaR}_{t|t-1}(p)$, que satisface $p=Pr\big( r_t< \textnormal{\mbox{VaR}}_{t|t-1 }(p) \ |\Omega_{t-1} \big)$ para una información pasada $\Omega_{t-1}$, como la esperanza condicional:
+Definimos el pron\'ostico $\text{ES}_{t|t-1}(p)$ realizado en el tiempo $t-1$ con un horizonte de una unidad de tiempo asociado al pronóstico $\mbox{VaR}_{t|t-1}(p)$, que satisface $p=Pr\big( r_t< \textnormal{\mbox{VaR}}_{t|t-1 }(p) \ |\Omega_{t-1} \big)$ para una información pasada $\Omega_{t-1}$, como la esperanza condicional:
 
 $$
 \textnormal{ES}_{t|t-1}(p)= \mathbb{E}\Big[r_t \ | r_t \leq \textnormal{VaR}_{t|t-1}(p) \Big]. 
