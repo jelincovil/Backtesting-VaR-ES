@@ -81,7 +81,17 @@ $$
 
 En esta sección listo algunos códigos de R usados y los graficos obtenidos para este trabajo publicado.
 
+```{r}
+# Códigos de R para el analisis de datos,
+# estimación de pronosticos y sus evaluaciones
+# Librerias básicas de R
 
+require(evir)
+require(moments)
+require(PerformanceAnalytics)
+require(eva)
+library(forecast)
+```
 
 
 ## Referencias
