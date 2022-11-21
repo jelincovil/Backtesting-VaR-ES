@@ -79,7 +79,8 @@ $$
 
 ## Avaluaciones de las previsiones generadas por los métodos POT e DPOT con códigos de R
 
-En esta sección listo algunos códigos de R usados y los graficos obtenidos para este trabajo publicado.
+En esta sección listo algunos códigos de R usados y los graficos obtenidos para este trabajo publicado. Comenzamos cargando las librerias
+usadas en el analisis.
 
 ```{r}
 # Códigos de R para el analisis de datos,
@@ -92,7 +93,11 @@ require(PerformanceAnalytics)
 require(eva)
 library(forecast)
 ```
+Luego cargamos los datos y verificas la existencia o no de Nas
 
+```{r}
+
+```
 
 ## Referencias
 
