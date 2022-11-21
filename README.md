@@ -1,6 +1,7 @@
 # Prueba de hipótesis para evaluar las previsiones del *Value-at-Risk*, *Expected Shortfall* y *Expectiles*
-Autores: Dra. Chang Chann. IME USP.
-         Dr. Jaime Lincovil. 
+Autores: 
+- Dra. Chang Chann [IME USP](https://www.ime.usp.br/~chang/home/index.php)
+- Dr. Jaime Lincovil [Linkedin](https://cl.linkedin.com/in/jaime-enrique-lincovil-curivil-973a9b186) 
 
 **Resumen:** <div align="justify">La evaluación de pronósticos de medidas de riesgo, tales como Value-at-Risk (VaR) y Expected Shortfall (ES), 
 es una actividad muy relevante para las instituciones financieras. Las pruebas de hip\'otesis que realizan esta evaluación se 
