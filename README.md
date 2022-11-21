@@ -2,7 +2,7 @@
 Autores: Dra. Chang Chann. IME USP.
          Dr. Jaime Lincovil. 
 
-<div align="center"> **Resumen:** La evaluación de pronósticos de medidas de riesgo, tales como Value-at-Risk (VaR) y Expected Shortfall (ES), 
+**Resumen:** <div align="center">La evaluación de pronósticos de medidas de riesgo, tales como Value-at-Risk (VaR) y Expected Shortfall (ES), 
 es una actividad muy relevante para las instituciones financieras. Las pruebas de hip\'otesis que realizan esta evaluación se 
 introdujeron con el objetivo de verificar la eficiencia de estas predicciones. En este trabajo comparamos el poder empírico de nuevas 
 clases de pruebas de evaluación presentes en la literatura. Ademá, usamos estos procedimientos para evaluar la eficiencia de las 
