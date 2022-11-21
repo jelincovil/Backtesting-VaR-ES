@@ -147,6 +147,10 @@ qqnorm(retornos, pch = 1, main = "",
        xlab="Quantis teóricos", ylab="Quantis amostrais")
 qqline(retornos, col = "black", lwd = 2)
 ```
+![plot](https://github.com/jelincovil/Backtesting-VaR-ES/blob/master/Figuras%20VaR/Figura1.jpg)
+![plot](https://github.com/jelincovil/Backtesting-VaR-ES/blob/master/Figuras%20VaR/Figura2.jpg)
+![plot](https://github.com/jelincovil/Backtesting-VaR-ES/blob/master/Figuras%20VaR/Figura3.jpg)
+![plot](https://github.com/jelincovil/Backtesting-VaR-ES/blob/master/Figuras%20VaR/Figura4.jpg)
 
 Aprovechamos de obtner estadistias de resumen
 
