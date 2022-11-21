@@ -128,8 +128,6 @@ outsample <- data2$retornos[1001: 2000]
 # Verifico que los datos no tengan NAs
 sum(is.na(outsample))
 sum(is.na(data2$retornos))
-
-
 ```
 
 Los siguientes códigos obtienes los gráficos exploratorios
@@ -148,27 +146,16 @@ hist(data2$retornos, prob=TRUE, ylim = c(0, 33),
 qqnorm(retornos, pch = 1, main = "",
        xlab="Quantis teóricos", ylab="Quantis amostrais")
 qqline(retornos, col = "black", lwd = 2)
-
 ```
 
 Aprovechamos de obtner estadistias de resumen
 
 ```{r}
-plot(ibovespa~Dia1, data1,type="l",xlab= "Tempo", ylab=" Ibovespa")
-axis.Date(1, Dia1, format(Dia, "%y/%m/%d"))
-
-plot(retornos~Dia2, data2, type="l",xlab= "Tempo", ylab="Retornos do Ibovespa")
-
-hist(data2$retornos, prob=TRUE, ylim = c(0, 33),
-     xlab="", ylab="", main="")
-  lines(density(data2$retornos), # density plot
-      lwd = 2, # thickness of line
-      col = "blue")
-
-qqnorm(retornos, pch = 1, main = "",
-       xlab="Quantis teóricos", ylab="Quantis amostrais")
-qqline(retornos, col = "black", lwd = 2)
-
+# Analisis descriptivo numerico
+summary(retornos)
+skewness(retornos)
+kurtosis(retornos)
+sd(retornos)
 ```
 
 
