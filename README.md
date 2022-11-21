@@ -21,7 +21,7 @@ Con motivos de difusión del conocimiento, en el pdf añadimos el conceptos *Exp
 
 ## VaR, infraciones del VaR, duraciones y  ES
 
-Sea $P_t$ el precio de un activo en el instante $t$ y $r_{t}= \log(P_{t}) - \log(P_{t-1})$ el correspondiente log-retorno (o simplemente retorno) al instante $t$. Para un $R_t=(P_t-P_{t-1})/P_t$ pequeno, se sabe que $r_t \approx R_t$, es decir, el retorno $r_t$ representa aproximadamente la variación de precios del activo desde el tiempo $ t-1$ a $t$. El VaR en el tiempo $t$ con probabilidad $p \in (0,1)$ y el $p$-cuantil $\inf\{l: F_t(l)\geq p\}$, donde $F_t $ es la función de distribución acumulada del retorno $r_t$. En particular, a continuación se da la definición formal de la previsión de VaR para una posición larga para distribuciones continuas.
+Sea $P_t$ el precio de un activo en el instante $t$ y $r_{t}= \log(P_{t}) - \log(P_{t-1})$ el correspondiente log-retorno (o simplemente retorno) al instante $t$. Para un $R_t=(P_t-P_{t-1})/P_t$ pequeno, se sabe que $r_t \approx R_t$, es decir, el retorno $r_t$ representa aproximadamente la variación de precios del activo desde el tiempo $t-1$ a $t$. El VaR en el tiempo $t$ con probabilidad $p \in (0,1)$ y el $p$-cuantil $\inf\{l: F_t(l)\geq p\}$, donde $F_t$ es la función de distribución acumulada del retorno $r_t$. En particular, a continuación se da la definición formal de la previsión de VaR para una posición larga para distribuciones continuas.
 
 
 **Definición**
