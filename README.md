@@ -147,11 +147,15 @@ hist(data2$retornos, prob=TRUE, ylim = c(0, 33),
 qqnorm(retornos, pch = 1, main = "",
        xlab="Quantis teóricos", ylab="Quantis amostrais")
 qqline(retornos, col = "black", lwd = 2)
+
 ```
+
+
 ![plot](https://github.com/jelincovil/Backtesting-VaR-ES/blob/master/Figuras%20VaR/Figura1.jpg)
 ![plot](https://github.com/jelincovil/Backtesting-VaR-ES/blob/master/Figuras%20VaR/Figura2.jpg)
 ![plot](https://github.com/jelincovil/Backtesting-VaR-ES/blob/master/Figuras%20VaR/Figura3.jpg)
 ![plot](https://github.com/jelincovil/Backtesting-VaR-ES/blob/master/Figuras%20VaR/Figura4.jpg)
+
 
 Aprovechamos de obtner estadistias de resumen
 
@@ -168,6 +172,127 @@ Aprovechamos de obtner estadistias de resumen
  0.01452887
 ```
 
+
+Los parametros para el pronóstico de un dia adelante del VaR y ES fueron estimados en un estudio separado. Los siguientes códigos 
+estiman el VaR y ES para la muestra de entrenamiento.
+
+```{r}
+
+tt <- 500   ;      ws <- 60               
+coverage <- 0.05  ; c <-1
+th1 <- 0.1 ;    th2 <-  0.35    
+
+# I VaR usando DPOT  ###
+               
+kk<- tt-ws
+sample<- retornos[kk:1999]
+length(sample)
+
+VaR.dpot <-rep(0, tt)
+ES.dpot <-rep(0, tt)
+
+for(i in 1:tt) {
+iws <- i+ws
+m_iws <- iws-1
+b <- sample[i:m_iws]
+quantil <- RiskDPOT(b,th1,c, coverage)
+VaR.dpot[i] <- quantil[1]
+ES.dpot[i] <- quantil[2]
+}
+
+
+tt <- 500                 ## size of the hit sequence
+ws <- 60                  ## window size
+coverage <- 0.05  ## probabilidade de cobertura
+c <-1
+th1 <- 0.1     ## Proporcao  limiar DPOT
+th2 <-  0.35     ## POT
+
+# I VaR usando DPOT  ###
+
+kk<- tt-ws
+sample<- retornos[kk:1999]
+length(sample)
+
+VaR.dpot <-rep(0, tt)
+ES.dpot <-rep(0, tt)
+
+for(i in 1:tt) {
+ print(i)
+iws <- i+ws
+m_iws <- iws-1
+b <- sample[i:m_iws]
+quantil <- RiskDPOT(b,th1,c, coverage)
+VaR.dpot[i] <- quantil[1]
+ES.dpot[i] <- quantil[2]
+}
+
+# III VaR e ES  Empiricos 
+
+VaRh <-rep(0, tt)
+ES.h<- rep(0, tt)
+for(i in 1:tt) {
+  iws <- i+ws
+  m_iws <- iws-1
+  b <- retornos[i:m_iws]
+  Qp <- quantile(b, coverage)
+ES.h<- rep(0, tt)
+for(i in 1:tt) {
+  iws <- i+ws
+  m_iws <- iws-1
+  b <- retornos[i:m_iws]
+  Qp <- quantile(b, coverage)
+  yy <- mean(b[b<Qp])
+  VaRh[i] <- Qp
+  ES.h[i] <- yy
+  print(i)
+}
+
+# III Var e ES R package 
+
+VaRh <-rep(0, tt) ; ESh <-rep(0, tt)
+for(i in 1:tt) {
+  iws <- i+ws
+  m_iws <- iws-1
+  b <- sample[i:m_iws]
+es <- ES(b,coverage, method = "historical")[1]
+var<- VaR( b , 1-coverage, method = "historical", invert = TRUE) [1]
+  VaRh[i] <- var
+  ESh[i] <- es
+    print(i)
+}
+
+```
+
+El siguiente gráfico muestra la serie de entrenamiento y el pronosticos del VaR.
+
+```{r}
+matplot(cbind(outsample, VaRh,  VaR.pot , VaR.dpot ),
+        ylab= "Retornos e previsoes do VaR",
+        xlab="Tempo", type="l",  lwd = c(0.5, 2, 1.5, 3.5),
+        col=1, lty=c(1, 1, 3, 3)  )
+
+legend("bottomright",c("Retorno", "HS", "POT", "DPOT" ), lwd = c(0.5, 2, 1.5, 3),
+       lty=c(1, 1, 3, 3), col = 1, cex = 0.55)
+
+
+```
+![plot](https://github.com/jelincovil/Backtesting-VaR-ES/blob/master/Figuras%20VaR/VaRws250_005.pdf)
+
+
+El siguiente gráfico muestra la serie de entrenamiento y el pronosticos del ES.
+
+```{r}
+matplot(cbind(outsample, ESh, ES.pot, ES.dpot),
+        ylab= "Retornos e previsoes do ES",
+        xlab="Dias", type="l",  lwd = c(0.5, 2, 2, 3.5),
+        lty=c(1, 1, 3, 3), col = 1 )
+legend("bottomright",c("Retorno","HS", "POT", "DPOT" ), lwd = c(0.5, 2, 2, 3.5),
+       lty=c(1, 1, 3, 3), col = 1 , cex = 0.55 )
+
+```
+
+![plot](https://github.com/jelincovil/Backtesting-VaR-ES/blob/master/Figuras%20VaR/ESws250_005.pdf)
 
 
 ## Referencias
