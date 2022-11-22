@@ -1,4 +1,5 @@
-# Prueba de hipótesis para evaluar las previsiones del *Value-at-Risk*, *Expected Shortfall* y *Expectiles*
+# Prueba de hipótesis para evaluar las previsiones del *Value-at-Risk* y *Expected Shortfall* 
+
 Autores: 
 - Dra. Chang Chann [IME USP](https://www.ime.usp.br/~chang/home/index.php)
 - Dr. Jaime Lincovil [Linkedin](https://cl.linkedin.com/in/jaime-enrique-lincovil-curivil-973a9b186) 
@@ -17,8 +18,8 @@ las pruebas consideradas. </div>
 
 **Palabras-clases:** Cobertura Condicional, Expected Shortfall, Poder empírico,  Prueba de evaluación, Value-at-Risk.
 
-Nota: el texto completo lo pueden encontrar en portugues [Chang y Lincovil (2019)](https://bibliotecadigital.fgv.br/ojs/index.php/rbfin/article/view/78758).
-Con motivos de difusión del conocimiento, en el pdf añadimos el conceptos *Expectil* y ejemplos.
+Nota: el texto completo lo pueden encontrar en portugues en [Chang y Lincovil (2019)](https://bibliotecadigital.fgv.br/ojs/index.php/rbfin/article/view/78758).
+
 
 ## VaR, infraciones del VaR, duraciones y  ES
 
