@@ -158,6 +158,8 @@ qqline(retornos, col = "black", lwd = 2)
 ![plot](https://github.com/jelincovil/Backtesting-VaR-ES/blob/master/Figuras%20VaR/Figura4.jpg)
 
 
+
+
 Aprovechamos de obtner estadistias de resumen
 
 ```{r}
