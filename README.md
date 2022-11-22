@@ -264,7 +264,7 @@ var<- VaR( b , 1-coverage, method = "historical", invert = TRUE) [1]
 
 ```
 
-El siguiente gráfico muestra la serie de entrenamiento y el pronosticos del VaR.
+El siguiente gráfico muestra la serie de entrenamiento y un ejemplo de pronósticos del VaR.
 
 ```{r}
 matplot(cbind(outsample, VaRh,  VaR.pot , VaR.dpot ),
@@ -277,10 +277,10 @@ legend("bottomright",c("Retorno", "HS", "POT", "DPOT" ), lwd = c(0.5, 2, 1.5, 3)
 
 
 ```
-![plot](https://github.com/jelincovil/Backtesting-VaR-ES/blob/master/Figuras%20VaR/VaRws250_005.pdf)
 
+![plot](https://github.com/jelincovil/Backtesting-VaR-ES/blob/master/Figuras%20VaR/VaRws250_005-1.png)
 
-El siguiente gráfico muestra la serie de entrenamiento y el pronosticos del ES.
+El siguiente gráfico muestra la serie de entrenamiento y un ejemplo de pronósticos del ES.
 
 ```{r}
 matplot(cbind(outsample, ESh, ES.pot, ES.dpot),
@@ -292,7 +292,7 @@ legend("bottomright",c("Retorno","HS", "POT", "DPOT" ), lwd = c(0.5, 2, 2, 3.5),
 
 ```
 
-![plot](https://github.com/jelincovil/Backtesting-VaR-ES/blob/master/Figuras%20VaR/ESws250_005.pdf)
+![plot](https://github.com/jelincovil/Backtesting-VaR-ES/blob/master/Figuras%20VaR/ESws250_005-1.png)
 
 
 ## Referencias
